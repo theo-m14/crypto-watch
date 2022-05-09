@@ -73,7 +73,7 @@ const GlobalChart = ({ coinsData }) => {
       <Treemap
         width={730}
         height={181}
-        data={dataArray}
+        data={dataArray ? dataArray : null}
         dataKey="size"
         stroke="rgb(51,51,51)"
         fill="fill"
