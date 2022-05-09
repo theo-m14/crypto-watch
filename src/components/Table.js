@@ -44,6 +44,7 @@ const Table = ({ coinsData }) => {
         {tableHeader.map((element) => (
           <li key={element}>
             <input
+              key={element}
               type="radio"
               name="header-element"
               id={element}
@@ -141,7 +142,9 @@ const Table = ({ coinsData }) => {
                 return null;
             }
           })
-          .map((coin, index) => <TableLine coin={coin} index={index} />)}
+          .map((coin, index) => (
+            <TableLine key={coin.id} coin={coin} index={index} />
+          ))}
     </div>
   );
 };
