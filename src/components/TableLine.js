@@ -1,5 +1,6 @@
 import React from "react";
 import PercentChange from "./PercentChange";
+import StarIcon from "./StarIcon";
 
 const TableLine = ({ coin, index }) => {
   const priceFormater = (number) => {
@@ -19,7 +20,7 @@ const TableLine = ({ coin, index }) => {
   return (
     <div className="table-line">
       <div className="infos-container">
-        <span>*</span>
+        <StarIcon coinId={coin.id} />
         <p>{index + 1}</p>
         <div className="img">
           <img src={coin.image} alt={"logo" + coin.symbol} height="20" />
